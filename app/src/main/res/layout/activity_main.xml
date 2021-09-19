@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_purple"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/first_num_edit"
+        style="@style/EditStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+        android:hint="@string/enter_first_number"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/second_num_edit"
+        style="@style/EditStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/enter_second_number"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_num_edit" />
+
+    <TextView
+        android:id="@+id/choose_text"
+        style="@style/EditStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/choose_option"
+        app:layout_constraintBottom_toTopOf="@+id/plus_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_num_edit"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <Button
+        android:id="@+id/plus_button"
+
+        android:layout_width="48dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/circle_button"
+        android:text="@string/plus"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/minus_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/minus_button"
+        style="@style/ButtonStyle"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/circle_button"
+        android:backgroundTint="@color/dark_purple"
+        android:text="@string/minus"
+        app:layout_constraintEnd_toStartOf="@+id/multiply_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/plus_button"
+        app:layout_constraintTop_toTopOf="@+id/plus_button" />
+
+    <Button
+        android:id="@+id/multiply_button"
+        style="@style/ButtonStyle"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/circle_button"
+        android:text="@string/multiply"
+        app:layout_constraintEnd_toStartOf="@+id/divide_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/minus_button"
+        app:layout_constraintTop_toTopOf="@+id/minus_button" />
+
+    <Button
+        android:id="@+id/divide_button"
+        style="@style/ButtonStyle"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/circle_button"
+        android:text="@string/divide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/multiply_button"
+        app:layout_constraintTop_toTopOf="@+id/multiply_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
